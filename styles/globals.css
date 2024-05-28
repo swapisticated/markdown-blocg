@@ -1,121 +1,81 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
 
-p {
-  margin: 15px 0;
-  line-height: 1.8;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-img {
+.flow {
+  padding: 25px 0;
   width: 100%;
-  border-radius: 10px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #2f2f2f;
+  border-bottom: 1px solid #2f2f2f;
+
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
-header {
-  background: steelblue;
-  color: #fff;
-  padding: 5px;
-  margin-bottom: 40px;
+.flow::-webkit-scrollbar {
+  display: none;
 }
 
-header a {
-  color: #fff;
-}
-
-.container {
-  max-width: 768px;
-  margin: auto;
-  overflow: auto;
-  padding: 0 10px;
-}
-
-.btn {
+.flow h1 {
+  font-size: 100px;
+  font-family: domain;
+  font-weight: 100;
   display: inline-block;
-  background: steelblue;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
+  /* background-color: red; */
+  animation-timing-function: linear;
+  margin-right: 30px;
+  animation-name: scroll;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
 }
 
-.btn:focus {
-  outline: none;
+.flow h1 span {
+  font-family: canopee;
+  background-color: #1b1b1b;
+  color: #cdcdcd;
+  padding: 0 12px;
+}
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-100% - 34px));
+  }
 }
 
-.btn:hover {
-  transform: scale(0.98);
+.flow:hover h1{
+  animation-play-state: paused;
 }
 
-.btn-back {
-  background: #f4f4f4;
-  color: #000;
-  margin-bottom: 20px;
+.image-div {
+  
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  
+
 }
 
-.posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 30px;
+.image-div:hover {
+  transform: scale(1.05);
 }
-
-.card {
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
 }
-
-.card-page {
-  padding: 15px 30px;
+.read:hover{
+  background-color: #151515;
+  color: aliceblue;
+  transition: all ease 0.4s;
 }
-
-.post-title {
-  margin: 10px 0;
-}
-
-.post-date {
-  background: #f4f4f4;
-  margin-bottom: 20px;
-  padding: 3px 10px;
-}
-
-.post-body ul,
-ol {
-  font-size: 110%;
-  line-height: 2.3;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.post-body pre {
-  background: #f4f4f4;
-  padding: 20px;
-  margin: 20px 0;
-  line-height: 2.3;
-}
-
 @media (max-width: 500px) {
   .posts {
     grid-template-columns: 1fr;

@@ -11,15 +11,25 @@ export default function PostPage({
 }) {
   return (
     <>
-      <Link legacyBehavior href="/">
-        <a className="btn btn-back"> Go Back</a>
-      </Link>
-      <div className="card card-page">
-        <h1 className="post-title">{title}</h1>
-        <div className="post-date">Posted on{date}</div>
-        <img src={cover_image} alt="" />
-        <div className="post-body">
-            <div dangerouslySetInnerHTML={{__html: marked(content)}}></div>
+      <div className="p-8 h-full">
+        <div>
+          <h1 className="text-6xl text font-bold justify-center flex text-gray-800">
+            {title}
+          </h1>
+          <div className="text-gray-500 text-sm justify-center flex mb-4">
+            {date}
+          </div>
+        </div>
+
+        <div className="justify-center h-1/3
+         flex w-full p-10">
+          <img src={cover_image} alt="" className=" rounded-lg  " />
+        </div>
+        <div className="flex justify-center w-full p-20 ">
+          <div
+            className="text-lg   p-10"
+            dangerouslySetInnerHTML={{ __html: marked(content) }}
+          ></div>
         </div>
       </div>
     </>
