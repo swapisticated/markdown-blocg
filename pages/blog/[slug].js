@@ -11,23 +11,28 @@ export default function PostPage({
 }) {
   return (
     <>
-      <div className="p-8 h-full">
+      <div class="p-8 h-auto bg-[#f9f6f2]">
         <div>
-          <h1 className="text-6xl text font-bold justify-center flex text-gray-800">
+          <h1 class="text-6xl text font-bold justify-center flex text-gray-800">
             {title}
           </h1>
-          <div className="text-gray-500 text-sm justify-center flex mb-4">
+          <div class="text-gray-500 text-sm justify-center flex mb-4">
             {date}
           </div>
         </div>
 
-        <div className="justify-center h-1/3
-         flex w-full p-10">
-          <img src={cover_image} alt="" className=" rounded-lg  " />
+        <div class="justify-center h-96 flex w-full p-2  ">
+          <img src={cover_image} alt="" class=" rounded-lg  " />
         </div>
-        <div className="flex justify-center w-full p-20 ">
+        <div class="flex justify-center w-full p-2 ">
           <div
-            className="text-lg   p-10"
+            class="grid justify-items-stretch text-lg 
+             grid-cols-1 
+             md:grid-cols-1 md:p-10  text-md 
+             lg:grid-cols-1 lg:p-10 
+             xl:grid-cols-1 xl:p-10 
+             2xl:grid-cols-1 2xl:p-20 
+             place-items-center gap-10"
             dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
         </div>

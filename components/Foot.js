@@ -1,11 +1,35 @@
 import Link from "next/link";
+import React from "react";
 
-export default function Header() {
+export default function Foot() {
   return (
-    <header id="header" className="bg-[#f9f6f2]">
-      <div id="nav" className="flex">
-        <div id="nav-part1">
-          <Link href="/">
+    <footer id="footer" className="bg-[#252525]">
+      <a href="mailto:swapnilsharma806@gmail.com" target="_blank">
+        <div className="flow ">
+          <h1>
+            Lets create something together{" "}
+            <span className="rounded-md">Email me</span>
+          </h1>
+          <h1>
+            Lets create something together <span>Email me</span>
+          </h1>
+          <h1>
+            Lets create something together <span>Email me</span>
+          </h1>
+        </div>
+      </a>
+      <div class="animate-bounce  scroll scroll--active flex justify-end mt-10 mx-10">
+        <a href="#top" type="button" class="top-btn">
+          <span class="sr-only">Scroll to Top</span>
+        </a>
+      </div>
+
+      <div class=" text-[#f9f6f2] flex items-center justify-center h-[50vh]">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between w-full max-w-4xl p-6">
+          <div class="text-6xl font-bold">
+            <p>Say hello.</p>
+          </div>
+          <Link className="animate-pulse" href="#header">
             {" "}
             <svg
               id="two-good"
@@ -40,40 +64,30 @@ export default function Header() {
               ></path>
             </svg>
           </Link>
-        </div>
-
-        <div
-          id="nav-part2"
-          className="flex items-center bg-[#e1dbd6] rounded-xl px-2 mr-4 gap-4"
-        >
-          <div id="links">
-            <Link href="/">Home</Link>
-            <a href="#footer">About</a>
-
-            <a
-              className="flex gap-1"
-              href="https://github.com/swapisticated"
-              target="_blank"
-            >
-              Github
-              <svg
-                class="go2708325546 external-link-icon"
-                width="8px"
-                height="8px"
-                viewBox="0 0 8 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                <path
-                  d="M1.6 0V0.8H6.636L0 7.436L0.564 8L7.2 1.364V6.4H8V0H1.6Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </a>
+          <div class="mt-8 md:mt-0 md:ml-16">
+            <p class="mb-4">
+              <a href="mailto:swapnilsharma806@gmail.com">
+                swapnilsharma806@gmail.com
+              </a>
+              <br></br>
+              <a href="tel:+917733003569">+917733003569</a>
+            </p>
+            <p class="mb-4">
+              Situated in<br></br>
+              Karnataka<br></br>
+              India<br></br>
+            </p>
+            <div class="flex flex-col">
+              <a href="https://www.instagram.com/swapisticated/">→ Instagram</a>
+              <a href="https://github.com/swapisticated">→ Github</a>
+              <a href="https://x.com/swapisticated">→ Twitter</a>
+              <a href="https://www.linkedin.com/in/swapisticated/">
+                → LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </footer>
   );
 }
