@@ -15,7 +15,7 @@ export default function SearchBar({ onSearch, onClear, hasSearched }) {
   return (
     <div>
       {" "}
-      <div className="search flex justify-center h-8 items-center border-2 mt-2 rounded-3xl max-w-fit p-8 ">
+      <div className="search flex justify-center h-8 items-center border-2 mt-2 rounded-xl max-w-fit p-8 ">
         <form className="flex justify-between gap-10" onSubmit={handleSubmit}>
           <input
             className="outline-none"
