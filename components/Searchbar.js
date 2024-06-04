@@ -57,16 +57,9 @@ export default function SearchBar({ posts, onSearch, onClear, hasSearched }) {
   };
 
   return (
-<<<<<<< HEAD
-    <div>
-      {" "}
-      <div className="search flex justify-center h-8 items-center border-2 mt-2 rounded-xl max-w-fit p-8 ">
-        <form className="flex justify-between gap-10" onSubmit={handleSubmit}>
-=======
     <div class="div" className="relative  px-10" ref={searchBarRef}>
       <div className="flex justify-center h-8 items-center border-2 hover:animate-pulse  border-[#e1dbd6] hover:border-[#cfcac6] mt-2 rounded-xl mx-auto max-w-fit  p-8">
         <form className="flex gap-6 w-full" onSubmit={handleSubmit}>
->>>>>>> 095832a (first updated commit)
           <input
             className="outline-none bg-[#f9f6f2]"
             id="search"
