@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Foot() {
   return (
-    <footer id="footer" className="bg-[#252525]">
+    <footer id="footer" className="bg-[#252525] relative">
       <a href="mailto:swapnilsharma806@gmail.com" target="_blank">
         <div className="flow ">
           <h1>
@@ -18,7 +18,8 @@ export default function Foot() {
           </h1>
         </div>
       </a>
-      <div class="animate-bounce  scroll scroll--active flex justify-end mt-10 mx-10">
+      <div class="animate-bounce scroll flex justify-end mt-10 mx-10">
+        {" "}
         <a href="#top" type="button" class="top-btn">
           <span class="sr-only">Scroll to Top</span>
         </a>
